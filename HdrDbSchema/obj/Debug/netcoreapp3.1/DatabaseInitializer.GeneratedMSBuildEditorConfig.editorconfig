@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = DatabaseInitializer
+build_property.ProjectDir = C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\

@@ -1,0 +1,16 @@
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\bin\Debug\netcoreapp3.1\DatabaseInitializer.exe
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\bin\Debug\netcoreapp3.1\DatabaseInitializer.deps.json
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\bin\Debug\netcoreapp3.1\DatabaseInitializer.runtimeconfig.json
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\bin\Debug\netcoreapp3.1\DatabaseInitializer.runtimeconfig.dev.json
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\bin\Debug\netcoreapp3.1\DatabaseInitializer.dll
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\bin\Debug\netcoreapp3.1\DatabaseInitializer.pdb
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.csproj.AssemblyReference.cache
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.AssemblyInfoInputs.cache
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.AssemblyInfo.cs
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.csproj.CoreCompileInputs.cache
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.csproj.CopyComplete
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.dll
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.pdb
+C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema\obj\Debug\netcoreapp3.1\DatabaseInitializer.genruntimeconfig.cache

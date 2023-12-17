@@ -1,0 +1,16 @@
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\bin\Debug\netcoreapp3.1\DatabaseSchema.exe
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\bin\Debug\netcoreapp3.1\DatabaseSchema.deps.json
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\bin\Debug\netcoreapp3.1\DatabaseSchema.runtimeconfig.json
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\bin\Debug\netcoreapp3.1\DatabaseSchema.runtimeconfig.dev.json
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\bin\Debug\netcoreapp3.1\DatabaseSchema.dll
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\bin\Debug\netcoreapp3.1\DatabaseSchema.pdb
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\bin\Debug\netcoreapp3.1\Npgsql.dll
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.csproj.AssemblyReference.cache
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.AssemblyInfoInputs.cache
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.AssemblyInfo.cs
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.csproj.CoreCompileInputs.cache
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.csproj.CopyComplete
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.dll
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.pdb
+C:\Work\Dima\dev\visma-test-task\DatabaseSchema\obj\Debug\netcoreapp3.1\DatabaseSchema.genruntimeconfig.cache

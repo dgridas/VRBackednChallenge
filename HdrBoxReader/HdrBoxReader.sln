@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HdrBoxReader", "HdrBoxReader\HdrBoxReader.csproj", "{B0775283-96E6-45ED-AC45-63EB1E0CB381}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HdrBoxReader.BLL", "HdrBoxReader.BLL\HdrBoxReader.BLL.csproj", "{356FE845-284D-4FE0-BBF4-84E99BFFE998}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HdrBoxReader.BO", "HdrBoxReader.BO\HdrBoxReader.BO.csproj", "{DD1F9627-1BAA-460D-8748-D795C44B82DD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HdrBoxReader.DAL", "HdrBoxReader.DAL\HdrBoxReader.DAL.csproj", "{14F56F93-025C-4487-9A4C-8FCA67813D16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0775283-96E6-45ED-AC45-63EB1E0CB381}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0775283-96E6-45ED-AC45-63EB1E0CB381}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0775283-96E6-45ED-AC45-63EB1E0CB381}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0775283-96E6-45ED-AC45-63EB1E0CB381}.Release|Any CPU.Build.0 = Release|Any CPU
+		{356FE845-284D-4FE0-BBF4-84E99BFFE998}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{356FE845-284D-4FE0-BBF4-84E99BFFE998}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{356FE845-284D-4FE0-BBF4-84E99BFFE998}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{356FE845-284D-4FE0-BBF4-84E99BFFE998}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD1F9627-1BAA-460D-8748-D795C44B82DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD1F9627-1BAA-460D-8748-D795C44B82DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD1F9627-1BAA-460D-8748-D795C44B82DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD1F9627-1BAA-460D-8748-D795C44B82DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14F56F93-025C-4487-9A4C-8FCA67813D16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14F56F93-025C-4487-9A4C-8FCA67813D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14F56F93-025C-4487-9A4C-8FCA67813D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14F56F93-025C-4487-9A4C-8FCA67813D16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DD3A8B44-6329-4479-871B-CE9F916AA136}
+	EndGlobalSection
+EndGlobal
