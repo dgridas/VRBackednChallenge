@@ -1,24 +1,29 @@
-﻿namespace HdrBoxReader.BLL
+﻿using Employee.BLL.ConfigProvider;
+
+namespace HdrBoxReader.BLL
 {
     public class FolderListener : IFolderListener
     {
+        private readonly IConfigProvider _configProvider;
+
+        public FolderListener(IConfigProvider configProvider) 
+        { 
+            _configProvider = configProvider;
+        }
+
         public List<string> GetAwaitingFiles(string targetPath, string fileMask)
         {
             return Directory.GetFiles(targetPath, fileMask).ToList();
         }
 
-        public bool MoveFileForProccesing(string sourceFile, string destination)
+        public void MoveFileIntoProcessedFolder(string inputFile)
         {
-            try
+            if (!Path.Exists(_configProvider.CompletedFilesFolder))
             {
-                Directory.Move(sourceFile, destination);
+                Directory.CreateDirectory(_configProvider.CompletedFilesFolder);
             }
-            catch (Exception ex)
-            {
-                return false;
-                //log error into Logger;
-            }
-            return true;
+            var f = Path.GetFileName(inputFile);
+            File.Move(inputFile, _configProvider.CompletedFilesFolder + "\\" + DateTime.Now.ToString("yyyyMMdd.HHmmss.fff") + "." + f);
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using HdrBoxReader.BO.Entities;
+﻿using Employee.BLL.ConfigProvider;
+using HdrBoxReader.BO.Entities;
 using Infrastructure.DAL;
 using Infrastructure.DAL.Repositories;
 using System;
@@ -9,22 +10,30 @@ using System.Threading.Tasks;
 
 namespace HdrBoxReader.BLL.DataServices
 {
-    public class HdrKeeper
+    public class HdrKeeper : IHdrKeeper
     {
-        private int _batchChunkSize;
+       // private int _batchChunkSize;
 
         private List<HdrBox> _chuckCollection;
 
-        public void Init(int batchChunkSize)
-        { 
-            _batchChunkSize = batchChunkSize;
+        protected readonly IFolderListener _folderListener;
+        protected readonly IConfigProvider _configuration;
+
+        public HdrKeeper(IConfigProvider configuration)
+        {
+            _configuration = configuration;
+        }
+
+        public void Init()
+        {
+           // _batchChunkSize = batchChunkSize;
             ResetChunk();
         }
 
         public void PersistIncomingHdrBox(HdrBox incomingData, bool IsFinal = false)
         {
             _chuckCollection.Add(incomingData);
-            if (_chuckCollection.Count() >= _batchChunkSize || IsFinal)
+            if (_chuckCollection.Count() >= _configuration.ChunkSize || IsFinal)
             {
                 SaveChunkToDB();
             }
@@ -32,7 +41,7 @@ namespace HdrBoxReader.BLL.DataServices
 
         private void SaveChunkToDB()
         {
-            using (var dbService = new UnitOfWork("Host=127.0.0.1; Port=7777; Database = hdrboxstorage; Username =postgres; Password =guest;"))
+            using (var dbService = new UnitOfWork(_configuration.ConnectionString)) // "Host=127.0.0.1; Port=7777; Database = hdrboxstorage; Username =postgres; Password =guest;"))
             {
                 foreach (var item in _chuckCollection)
                 {

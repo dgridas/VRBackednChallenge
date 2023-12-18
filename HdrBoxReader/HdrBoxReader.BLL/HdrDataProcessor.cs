@@ -1,4 +1,6 @@
-﻿using HdrBoxReader.BLL.DataServices;
+﻿using Employee.BLL.ConfigProvider;
+using HdrBoxReader.BLL.DataServices;
+using HdrBoxReader.BO.Constants;
 using HdrBoxReader.BO.Entities;
 using System;
 using System.Collections.Generic;
@@ -10,16 +12,17 @@ namespace HdrBoxReader.BLL
 {
     public class HdrDataProcessor : IHdrDataProcessor
     {
-        private HdrFileReader _fileReader;
-        private HdrParser _lineParser;
-        private HdrKeeper _dataKeeper;
+        private IHdrFileReader _fileReader;
+        private IHdrParser _lineParser;
+        private IHdrKeeper _dataKeeper;
+        private IConfigProvider _configProvider;
 
-        public HdrDataProcessor()
+        public HdrDataProcessor(IHdrFileReader fileReader, IHdrParser lineParser, IHdrKeeper dataKeeper, IConfigProvider configProvider)
         {
-            _fileReader = new HdrFileReader();
-            _lineParser = new HdrParser();
-            _dataKeeper = new HdrKeeper();
-
+            _fileReader = fileReader;
+            _lineParser = lineParser;
+            _dataKeeper = dataKeeper;
+            _configProvider = configProvider;
         }
         public void ProcessHdrFile(string inputFile, int chunkSize)
         {
@@ -27,28 +30,28 @@ namespace HdrBoxReader.BLL
             HdrBox? hdrBox = null;
 
             _fileReader.Init(inputFile);
-            _dataKeeper.Init(chunkSize);
+            _dataKeeper.Init();
 
             do
             {
                 line = _fileReader.GetLine();
                 if (!string.IsNullOrWhiteSpace(line))
                 {
-                    if (line.StartsWith("HDR"))
+                    if (line.StartsWith(Constants.BoxPrefix))
                     {
                         if (hdrBox != null) StoreExistingBox(hdrBox); //keep previous if exists
                         hdrBox = _lineParser.ParseHDRBox(line);
                     }
-                    else if (line.StartsWith("LINE") && hdrBox != null)
+                    else if (line.StartsWith(Constants.ContentPrefix) && hdrBox != null)
                     {
                         hdrBox.Contents.Add(_lineParser.ParseBoxLine(line));
                     }
-
-                    Console.WriteLine(line);
                 }
             } while (!_fileReader.IsEndOfFileReached);
             StoreExistingBox(hdrBox, true);
         }
+
+     
 
         private void StoreExistingBox(HdrBox? incomingHdrBox, bool isFinal = false)
         {
