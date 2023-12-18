@@ -1,0 +1,24 @@
+Look at HdrBoxReader appsettings.json to know about necessary settings for DB(Postgres) and file system.
+
+Before run application please ensure listening folder was created with write permissions for user.
+
+I use Dapper for access to database.
+
+Writing to DB happen by chunks defined in appsettings.json.
+
+Just put data file into listening folder after starting the app (HdrBoxReader).
+
+You can install DBeaver(management tool) to check stored SQL data in database.
+
+
+For architecture was used n-tier solution design.
+Solution splitted to 4 layers in different projects:
+-BLL - bussiness logic
+-DAL - data acess
+-BO - bussines object
+-and HdrBoxReader - concole application whcih also is representation layers
+
+All logic implemented in short clases with following single responsibility principle.
+
+Solution use dependecy injection library and useful for unit testing with easy mocking of dependecies.
+
