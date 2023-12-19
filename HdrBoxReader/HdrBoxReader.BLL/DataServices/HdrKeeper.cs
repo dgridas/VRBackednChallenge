@@ -26,7 +26,6 @@ namespace HdrBoxReader.BLL.DataServices
 
         public void Init()
         {
-           // _batchChunkSize = batchChunkSize;
             ResetChunk();
         }
 
@@ -41,7 +40,7 @@ namespace HdrBoxReader.BLL.DataServices
 
         private void SaveChunkToDB()
         {
-            using (var dbService = new UnitOfWork(_configuration.ConnectionString)) // "Host=127.0.0.1; Port=7777; Database = hdrboxstorage; Username =postgres; Password =guest;"))
+            using (var dbService = new UnitOfWork(_configuration.ConnectionString)) 
             {
                 foreach (var item in _chuckCollection)
                 {

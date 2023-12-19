@@ -44,7 +44,8 @@ namespace HdrBoxReader.BLL
                     }
                     else if (line.StartsWith(Constants.ContentPrefix) && hdrBox != null)
                     {
-                        hdrBox.Contents.Add(_lineParser.ParseBoxLine(line));
+                        var hdrContent = _lineParser.ParseBoxLine(line);
+                        if (hdrContent != null) hdrBox.Contents.Add(hdrContent);
                     }
                 }
             } while (!_fileReader.IsEndOfFileReached);

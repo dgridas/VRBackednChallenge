@@ -1,7 +1,10 @@
-cd C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge
-$Env:hdrPassword="hdruser"
-$Env:hdrDatabase="HdrBoxStorage"
-$Env:hdrPort="8888"
+#if you have disabled powerShelS scripts running - just copy script into PowerShell ISE
+#then uncomment next string, modify path to actual folder where example was uploaded and press F5
+#cd C:\VR-test-example
+
+$Env:hdrPassword="guest"
+$Env:hdrDatabase="hdrboxstorage"
+$Env:hdrPort="7777"
 $Env:hdrSchemaLocation=$("$(Get-Location)\HdrDbSchema\dbHdrBoxSchema.sql")
 
 Write-Host ""
@@ -35,5 +38,3 @@ Try {
     docker stop "$container"
 }
 
-#C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema
-#C:\Work\Dima\dev\VRGroup-test-task-backend\VR-backend-challenge\HdrDbSchema

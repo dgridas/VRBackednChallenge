@@ -1,6 +1,7 @@
 ﻿using Employee.BLL.ConfigProvider;
 using HdrBoxReader.BLL;
 using HdrBoxReader.BLL.DataServices;
+using HdrBoxReader.BLL.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace HdrBoxReader
@@ -22,21 +23,19 @@ namespace HdrBoxReader
         {
        
 
-            Console.WriteLine("!----Start HdrBoxReader!------");
+            Console.WriteLine("#### Start HdrBoxReader! ####");
             Console.WriteLine("Press ESC to stop");
 
             IServiceProvider serviceProvider = RegisterServices();
-
             Program program = serviceProvider.GetService<Program>();
 
             program.DoProcessLogic(args);
-            
-            Console.WriteLine("!----End HdrBoxReader!------\n\n");
-
         }
 
         public void DoProcessLogic(string[] args)
         {
+            Console.WriteLine($"Please put your data files into folder {_configuration.ListeningFolder}");
+
             while (true)
             {
                 var files = _folderListener.GetAwaitingFiles(_configuration.ListeningFolder, _configuration.FileMask);
@@ -56,6 +55,7 @@ namespace HdrBoxReader
                 if (Console.KeyAvailable == true)
                 {
                     var pressedKey = Console.ReadKey();
+
                     if (pressedKey.Key == ConsoleKey.Escape)
                         break;
                 }
@@ -67,12 +67,14 @@ namespace HdrBoxReader
         private static IServiceProvider RegisterServices()
         {
             var services = new ServiceCollection();
+            services.AddScoped<IStreamWrapper, StreamWrapper>();
             services.AddScoped<IHdrFileReader, HdrFileReader>();
             services.AddScoped<IFolderListener, FolderListener>();
             services.AddScoped<IConfigProvider, ConfigProvider>();
             services.AddScoped<IHdrDataProcessor, HdrDataProcessor>();
             services.AddScoped<IHdrKeeper, HdrKeeper>();
             services.AddScoped<IHdrParser, HdrParser>();
+           
 
             services.AddScoped<Program>();
             return services.BuildServiceProvider();

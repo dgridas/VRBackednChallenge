@@ -9,7 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HdrBoxReader.BLL", "HdrBoxR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HdrBoxReader.BO", "HdrBoxReader.BO\HdrBoxReader.BO.csproj", "{DD1F9627-1BAA-460D-8748-D795C44B82DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HdrBoxReader.DAL", "HdrBoxReader.DAL\HdrBoxReader.DAL.csproj", "{14F56F93-025C-4487-9A4C-8FCA67813D16}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HdrBoxReader.DAL", "HdrBoxReader.DAL\HdrBoxReader.DAL.csproj", "{14F56F93-025C-4487-9A4C-8FCA67813D16}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HdrBoxReader.BLL.UnitTests", "HdrBox.UnitTests\HdrBoxReader.BLL.UnitTests.csproj", "{5837BAE2-F3F3-4063-958A-F0C811DAC50A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTesting", "UnitTesting", "{4493E2D7-B312-4CBA-9BD7-6192818BC4EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestDataBundle", "TestDataBundle\TestDataBundle.csproj", "{28F3570D-E3DF-43F1-8947-E98BE154C8D6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,9 +39,21 @@ Global
 		{14F56F93-025C-4487-9A4C-8FCA67813D16}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14F56F93-025C-4487-9A4C-8FCA67813D16}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14F56F93-025C-4487-9A4C-8FCA67813D16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5837BAE2-F3F3-4063-958A-F0C811DAC50A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5837BAE2-F3F3-4063-958A-F0C811DAC50A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5837BAE2-F3F3-4063-958A-F0C811DAC50A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5837BAE2-F3F3-4063-958A-F0C811DAC50A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28F3570D-E3DF-43F1-8947-E98BE154C8D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28F3570D-E3DF-43F1-8947-E98BE154C8D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28F3570D-E3DF-43F1-8947-E98BE154C8D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28F3570D-E3DF-43F1-8947-E98BE154C8D6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5837BAE2-F3F3-4063-958A-F0C811DAC50A} = {4493E2D7-B312-4CBA-9BD7-6192818BC4EF}
+		{28F3570D-E3DF-43F1-8947-E98BE154C8D6} = {4493E2D7-B312-4CBA-9BD7-6192818BC4EF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DD3A8B44-6329-4479-871B-CE9F916AA136}
